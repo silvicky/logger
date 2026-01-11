@@ -17,6 +17,7 @@ public class CommandManagerMixin
     public void inject1(ParseResults<ServerCommandSource> parseResults, String command, CallbackInfo ci)
     {
         ServerCommandSource source=parseResults.getContext().getSource();
+        if(source.getName().equals("@"))return;
         cmdLogger.info(String.format("%s: %s",source.getName(),command));
     }
 }
