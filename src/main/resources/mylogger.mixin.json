@@ -3,10 +3,10 @@
   "package": "io.silvicky.logger.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "CommandManagerMixin",
+    "CommandsMixin",
     "MinecraftServerMixin",
-    "PlayerManagerMixin",
-    "ServerPlayNetworkHandlerMixin"
+    "PlayerListMixin",
+    "ServerGamePacketListenerImplMixin"
   ],
   "injectors": {
     "defaultRequire": 1
